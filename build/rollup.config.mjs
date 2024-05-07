@@ -7,13 +7,12 @@ export default {
   input: "src/index.js",
   output: {
     file: "dist/index.js",
-    format: "umd",
+    format: "es",
     name: "VToggleSlide",
+    banner: `/**
+    * v-toggle-slide v${version}
+    * (c) ${new Date().getFullYear()} 4Small 
+    * @license MIT \n*/`,
   },
   plugins: [resolve(), commonjs(), terser()],
-  banner: `/**
-  * v-toggle-slide v${version}
-  * (c) ${new Date().getFullYear()} 4Small 
-  * @license MIT
-  */`,
 };
